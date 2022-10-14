@@ -16,7 +16,7 @@ pipeline {
 				//sh 'cp .env.example .env'
 				//sh 'php artisan key:generate'				
 				sh 'docker-compose down'
-				sh 'docker-compose up -d --force-recreate --renew-anon-volumes'
+				sh 'docker-compose up -d --build'
 			}
 		}
 		stage('Run') {            
